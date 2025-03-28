@@ -18,4 +18,24 @@
 </script>
 
 <style lang="scss" scoped>
+	.banner{
+		width:750rpx;
+		margin: 30 rpx 0;
+		swiper{
+			width: 750rpx;
+			height: 750rpx;
+			
+			swiper-item{
+				width: 100%;
+				height:100%;
+				padding: 0 30rpx;
+				
+				image{
+					width: 100%;
+					height: 100%;
+					border-radius: 10rpx;
+				}
+			}
+		}
+	}
 </style>
