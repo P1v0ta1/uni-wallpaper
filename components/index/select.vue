@@ -1,3 +1,4 @@
+<!-- https://uniapp.dcloud.net.cn/component/uniui/uni-dateformat.html -->
 <template>
    <view class="select">
 	   <commonTitleVue>
@@ -6,15 +7,15 @@
 			   <view class="date">
 				   <uni-icons type="calendar-filled"></uni-icons>
 				   <text class="text">
-					   <uni-dateformat :date="Date.now()"></uni-dateformat>
+					   <uni-dateformat :date="Date.now()" format="M月dd日"></uni-dateformat>
 				   </text>
 			   </view>
 		   </template>
 	   </commonTitleVue>
 	   <view class="content">
 		   <scroll-view>
-			   <view class="item" v-for="item in 8">
-				   <image :src="'/static/wallpaper/w' + item + '.jpg'"mode="aspectfill"></image>
+			   <view class="item" v-for="item in 5"> <!-- 8 个实际-->
+				   <image :src="'/static/wallpaper/w' + item + '.jpg'"mode="aspectFill"></image>
 			   </view>
 		   </scroll-view>
 	   </view>
@@ -40,15 +41,15 @@
 	}
 	
 	.content{
-		width: 720rpx;
-		margin-left: 30rpx;
+		width: 750rpx;
+		margin-left: 20rpx;
 		margin-top: 30rpx;
 		
 		scroll-view{
 			white-space: nowrap;
 			
 			.item{
-				width: 200rpx;
+				width: 130rpx;
 				height: 450rpx;
 				display: inline-block;
 				margin-right: 15rpx;

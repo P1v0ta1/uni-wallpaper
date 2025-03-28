@@ -9,7 +9,7 @@
 			<swiper
 			autoplay
 			circular
-			vertical
+			vertical 
 			interval="3000"
 			duration="300"
 			>
