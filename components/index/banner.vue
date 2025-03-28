@@ -23,7 +23,7 @@
 		margin: 30 rpx 0;
 		swiper{
 			width: 750rpx;
-			height: 750rpx;
+			height: 350rpx;
 			
 			swiper-item{
 				width: 100%;
