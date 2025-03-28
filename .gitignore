@@ -1,0 +1,5 @@
+.vscode
+.idea
+/dist/
+/unpackage/
+/node_modules/
