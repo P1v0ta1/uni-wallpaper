@@ -33,7 +33,7 @@
 	                 font-size: 32rpx;
 	                }
 	                
-	        .content {
+	        .content { 
 	                margin-top: 30rpx;
 	                padding: 0 30rpx;
 	                display: grid;
