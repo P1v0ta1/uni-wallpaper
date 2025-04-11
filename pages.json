@@ -12,6 +12,13 @@
 			{
 				"navigationBarTitleText" : "分类"
 			}
+		},
+		{
+			"path" : "pages/user/user",
+			"style" : 
+			{
+				"navigationBarTitleText" : "我的"
+			}
 		}
 	],
 	"tabBar":{
