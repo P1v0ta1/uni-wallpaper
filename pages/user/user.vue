@@ -54,6 +54,8 @@
 		</view>
 		
 		<view class="section">
+			
+			
 			<view class="list">
 				<navigator url="">
 					<view class="row">

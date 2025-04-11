@@ -7,7 +7,7 @@
 		<view class="tab">{{ tab }}</view>
 	</navigator>
 	
-	<navigator class="item more" url="/pages/classify/classify" v-if="isMore">
+	<navigator class="item more" url="/pages/classify/classify" open-type="switchTab" v-if="isMore">
 		<image class="pic" src="/static/wallpaper/w1.jpg" mode="aspectFill"></image>
 		<view class="mask">
 			<uni-icons type="more-filled" color="#ffffff" size="24"></uni-icons>

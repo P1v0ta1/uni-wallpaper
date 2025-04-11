@@ -3,14 +3,16 @@
 		<commonTitleVue>
 			<template #title>专题精选</template>
 			<template #custom>
-				<navigator url="" class="more">More+</navigator>
+				<navigator url="/pages/classify/classify" open-type="switchTab" class="more">More+</navigator>
+				<!-- open-type="switchTab" 调整原本tabbar栏跳转问题  用法：跳转到tabbar页面 并关闭其他非tabbar页面-->
+				<!-- https://uniapp.dcloud.net.cn/api/router.html#switchtab 文档-->
 			</template>
 		</commonTitleVue>
 		<view class="content">
 		<themeItemVue
 			v-for="item in 8"
 			:isMore="false"
-			:link=" '/pages/classify/classify' "
+			:link=" '/pages/classlist/classlist' "
 			:image="'/static/wallpaper/w' + item +'.jpg'"
 			:mask="'专题' + item"
 			:tab="'标签' + item">
