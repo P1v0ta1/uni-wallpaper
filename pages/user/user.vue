@@ -1,5 +1,5 @@
 <!-- display内容详解 https://developer.mozilla.org/zh-CN/docs/Web/CSS/display -->
-
+<!-- uni-icon文档 https://uniapp.dcloud.net.cn/component/uniui/uni-icons.html -->
 <template>
 	<view class="userLayout">
 		<view class="userInfo">
@@ -109,7 +109,7 @@
 		   }
 		
 		    .loginBtn{
-			margin-top: 10rpx;
+			margin-top: 10rpx;  //登录按钮上方间隔
 			width: 140rpx;
 			height: 60rpx;
 			line-height: 60rpx;
@@ -142,6 +142,8 @@
 					}
 				}
 				
+				//justify-content 文档 https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content
+				//align-items 文档 https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-items
 				.row{
 					display: flex;
 					justify-content:space-between;
