@@ -4,7 +4,7 @@
 		
 		<noticeVue></noticeVue>
 		
-		<common-title></common-title>
+		
 		
 		<selectVue></selectVue>
 		

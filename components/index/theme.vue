@@ -6,6 +6,7 @@
 				<navigator url="" class="more">More+</navigator>
 			</template>
 		</commonTitleVue>
+		<view class="content">
 		<themeItemVue
 			v-for="item in 8"
 			:isMore="false"
@@ -16,6 +17,7 @@
 			
 		</themeItemVue>
 		<themeItemVue :isMore="true"></themeItemVue>
+		</view>
 	</view>
 </template> 
 
