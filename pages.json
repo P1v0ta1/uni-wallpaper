@@ -5,6 +5,13 @@
 			"style": {
 				"navigationBarTitleText": "首页"
 			}
+		},
+		{
+			"path" : "pages/classify/classify",
+			"style" : 
+			{
+				"navigationBarTitleText" : "分类"
+			}
 		}
 	],
 	"globalStyle": {

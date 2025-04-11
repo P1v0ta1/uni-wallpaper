@@ -13,7 +13,7 @@
 		   </template>
 	   </commonTitleVue>
 	   <view class="content">
-		   <scroll-view>
+		   <scroll-view> <!-- class="Scroll_H" scroll-x="true" @scroll="scroll" scroll-left="120" -->
 			   <view class="item" v-for="item in 5"> <!-- 8 个实际-->
 				   <image :src="'/static/wallpaper/w' + item + '.jpg'"mode="aspectFill"></image>
 			   </view>
@@ -24,6 +24,13 @@
 
 <script setup>
 	import commonTitleVue from '../common-title/common-title.vue';
+	
+	/*methods:{
+	scroll: function(e) {
+					console.log(e)
+					this.old.scrollTop = e.detail.scrollTop
+				}
+		}	*/	
 </script>
 
 <style lang="scss" scoped>
@@ -46,7 +53,12 @@
 		margin-top: 30rpx;
 		
 		scroll-view{
-			white-space: nowrap;
+			
+			
+			.Scroll_H{
+				white-space: nowrap;
+				width: 100%;
+			}
 			
 			.item{
 				width: 130rpx;

@@ -1,9 +1,14 @@
 <template>
 	<view class="homeLayout">
 		<bannerVue></bannerVue>
+		
 		<noticeVue></noticeVue>
+		
 		<common-title></common-title>
+		
 		<selectVue></selectVue>
+		
+		<ThemeVue></ThemeVue>
 	</view>
 </template>
 
@@ -12,6 +17,7 @@
 	import noticeVue from '../../components/index/notice.vue';
 	import selectVue from '../../components/index/select.vue';
 	import commonTitleVue from '../../components/common-title/common-title.vue';
+	import ThemeVue from '../../components/index/theme.vue';
 </script>
 
 <style lang="scss">
