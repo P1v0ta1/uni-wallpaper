@@ -31,8 +31,7 @@
 			"path" : "pages/preview/preview",
 			"style" : 
 			{
-				"navigationBarTitleText" : "预览\r
-		\t\t"
+				"navigationBarTitleText" : "预览"
 			}
 		}
 	],
