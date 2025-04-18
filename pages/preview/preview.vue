@@ -11,7 +11,7 @@
                                 <uni-icons type="back" size="20" color="#ffffff"></uni-icons>
                         </view>
 
-                        <view class="count">4 / 8</view>
+                        <view class="count"> 4 / 8</view>  
 
                         <view class="time">
                                 <uni-dateformat :date="Date.now()" format="hh:mm"></uni-dateformat>
@@ -53,6 +53,16 @@
                                 width: 100%;
                                 height: 100%;
                         }
+						
+						.count{
+							//10vh==视口高度的10%
+							top: 10vh;
+							background-color: rgba(0, 0, 0, 0.3);
+							padding: 8rpx 28rpx;
+							border-radius: 40rpx;
+							backdrop-filter: blur(10px);
+							font-size: 28rpx;
+						}
                 }
 				
 				.mask{
@@ -87,7 +97,7 @@
 						border-radius: 40rpx;
 						backdrop-filter: blur(10px);
 						font-size: 28rpx;
-					}
+					}   
 					
 					.time{
 						font-size: 150rpx;
@@ -104,6 +114,32 @@
 						line-height: 1em;
 						text-shadow:0 4rpx rgba(0, 0, 0, 0.3) ;
 					}
+					
+					.footer{
+						bottom: 10vh;
+						background-color: rgba(255,255,255,0.3);
+						width: 70vw;
+						height: 100rpx;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+						backdrop-filter: blur(12px);
+						border-radius: 20rpx;
+						color: black;
+						box-shadow: 0 0 15rpx 3rpx rgba(0,0,0,0.3);
+					}
+					
+					.box{
+						display: flex;
+					    flex-direction: column;
+						justify-content: center;
+						padding: 2rpx 12rpx;
+						
+						.text{
+							font-size: 26rpx;
+						}
+					}
+					
 				}
         }
 </style>
