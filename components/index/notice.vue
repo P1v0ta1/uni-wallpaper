@@ -26,7 +26,17 @@
 	</view>
 </template>
 
-<script>
+<script setup>
+	import { request } from '../../utils/request.js';
+	import {ref} from 'vue';
+	
+	const noticeList = ref([]);
+	
+	const getNotice = async() => {
+		let result = request({
+			URL:'/wallpaper/notice'
+		})
+	}
 </script>
 
 <style lang="scss" scoped>
