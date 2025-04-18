@@ -17,6 +17,6 @@ export const getTitleBarHeight = () => {
 		//顶部菜单按钮高度+顶部菜单按钮的top位置 - 状态栏高度 *2 
 		return height + (top -getStatusBarHeight()) * 2;
 	} else {
-		return 44;
+		return 44; 
 	}
 }
