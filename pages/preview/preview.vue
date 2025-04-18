@@ -2,12 +2,12 @@
         <view class="previewLayout">
                 <swiper circular>
                         <swiper-item v-for="item in 8">
-                                <image :src="'/static/wallpaper/w' + item + '.jpg'"></image>
+                                <image @click="toHideMask" :src="'/static/wallpaper/w' + item + '.jpg'"></image>
                         </swiper-item>
                 </swiper>
 
-                <view class="mask">
-                        <view class="back">
+                <view class="mask" v-if="showMask">
+                        <view class="back" @click="toBack">
                                 <uni-icons type="back" size="20" color="#ffffff"></uni-icons>
                         </view>
 
@@ -22,7 +22,7 @@
 
                         <!-- 图片信息栏 -->
                         <view class="footer">
-                                <view class="box">
+                                <view class="box" @click="showPopup">
                                         <uni-icons type="info" size="28"></uni-icons>
                                         <text class="text">信息</text>
                                 </view>
@@ -36,6 +36,41 @@
                                 </view>
                         </view>
                 </view>
+				<!-- 弹出层 -->
+				<uni-popup type="bottom" ref="popup">
+				        <view class="popupInfo">
+				                    <view class="popupHeader">
+				                            <view class="title">壁纸信息</view>
+				                                 <uni-icons type="clone" size="18" @click="closePopup"></uni-icons>
+				                    </view>
+				         </view>
+						 
+						 <scroll-view>
+							 <view class="row">
+								 <view class="lable">壁纸ID:</view>
+								 <text selectable class="value">22222</text>
+							 </view>
+							<view class="row">
+								<view class="lable">分类:</view>
+								<text selectable class="value">风景</text>
+							</view>
+							<view class="row">
+								 <view class="lable">发布者:</view>
+								 <text selectable class="value">p1v</text>
+							</view>
+							<view class="row">
+								 <view class="lable">评分:</view>
+								 <text selectable class="value rateBox">
+									 <uni-rate readonly touchable value="5"></uni-rate>
+									 <text class="score">五星</text>
+								 </text>
+							</view>
+							<view class="row">
+								 <view class="lable">摘要:</view>
+								 <text selectable class="value">摘要</text>
+							</view>
+						 </scroll-view>
+				</uni-popup>
         </view>
 </template>
 
@@ -54,15 +89,6 @@
                                 height: 100%;
                         }
 						
-						.count{
-							//10vh==视口高度的10%
-							top: 10vh;
-							background-color: rgba(0, 0, 0, 0.3);
-							padding: 8rpx 28rpx;
-							border-radius: 40rpx;
-							backdrop-filter: blur(10px);
-							font-size: 28rpx;
-						}
                 }
 				
 				.mask{
@@ -75,19 +101,19 @@
 						width: fit-content;
 					}
 					
-					.back{
-						width: 60rpx;
-						height:60rpx;
-						left: 30rpx;
-						right: 30rpx;
-						margin-left:0;
-						background-color: rgba(0, 0, 0, 0.5);
-						border-radius: 50%;
-						backdrop-filter: blur(10px);
-						display: flex;
-						justify-content: center;
-						align-items: center;
-					}
+					.back {
+                                width: 60rpx;
+                                height: 60rpx;
+                                left: 30rpx;
+                                top: 30rpx;
+                                margin-left: 0;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                border-radius: 50%;
+                                backdrop-filter: blur(10px);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                        }
 					
 					.count{
 						//10vh==视口高度的10%
@@ -121,13 +147,12 @@
 						width: 70vw;
 						height: 100rpx;
 						display: flex;
-						justify-content: space-between;
+						justify-content: space-around;
 						align-items: center;
 						backdrop-filter: blur(12px);
 						border-radius: 20rpx;
 						color: black;
 						box-shadow: 0 0 15rpx 3rpx rgba(0,0,0,0.3);
-					}
 					
 					.box{
 						display: flex;
@@ -139,11 +164,39 @@
 							font-size: 26rpx;
 						}
 					}
-					
 				}
+			}
         }
 </style>
 
 <script setup>
+	
+	import {
+            ref
+        } from 'vue';
+        // 默认情况下显示mask
+        const showMask = ref(true);
+        // 默认情况下隐藏弹出层
+        const popup = ref(null);
+
+        // 返回上一页
+        const toBack = () => {
+                uni.navigateBack();
+        }
+
+        // 控制mask的显示与隐藏
+        const toHideMask = () => {
+                showMask.value = !showMask.value;
+        }
+		
+		//显示弹出层
+		const showPopup = () =>{
+			popup.value.open();
+		}
+		
+		//关闭弹出层
+		const closePopup = () =>{
+			popup.value.close();
+		}
 
 </script>
