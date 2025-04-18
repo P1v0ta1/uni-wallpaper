@@ -7,7 +7,9 @@
 		</swiper>
 
 		<view class="mask" v-if="showMask">
-			<view class="back" @click="toBack">
+			<view class="back" @click="toBack":style="{
+				top: getStatusBarHeight() + 'px'
+			}">
 				<uni-icons type="back" size="20" color="#ffffff"></uni-icons>
 			</view>
 
@@ -231,6 +233,7 @@
 	import {
 		ref
 	} from 'vue';
+	import { getStatusBarHeight } from '../../utils/system';
 	// 默认情况下显示mask
 	const showMask = ref(true);
 	// 默认情况下隐藏弹出层

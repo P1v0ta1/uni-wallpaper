@@ -1,3 +1,5 @@
+<!-- 专题精选部分 -->
+
 <template>
 	<view class="theme">
 		<commonTitleVue>
@@ -8,16 +10,17 @@
 				<!-- https://uniapp.dcloud.net.cn/api/router.html#switchtab 文档-->
 			</template>
 		</commonTitleVue>
+		<!-- 调用commmonTitleVue来封装处理标题块 -->
+		
 		<view class="content">
 		<themeItemVue
 			v-for="item in 8"
 			:isMore="false"
-			:link=" '/pages/classlist/classlist' "
 			:image="'/static/wallpaper/w' + item +'.jpg'"
 			:mask="'专题' + item"
 			:tab="'标签' + item">
-			
 		</themeItemVue>
+		
 		<themeItemVue :isMore="true"></themeItemVue>
 		</view>
 	</view>

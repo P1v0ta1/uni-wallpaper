@@ -3,12 +3,12 @@
 <template>
 	<navigator class="item" :url="link" v-if="!isMore">
 		<image class="pic" :src="image" mode="aspectFill"></image>
-		<view class="mask">{{ mask }}</view>
-		<view class="tab">{{ tab }}</view>
+		<view class="mask">{{ mask }}</view> <!-- 专题方块 -->
+		<view class="tab">{{ tab }}</view>   <!-- 标签方块 -->
 	</navigator>
 
 	<navigator class="item more" url="/pages/classify/classify" open-type="switchTab" v-if="isMore">
-		<image class="pic" src="/static/wallpaper/w1.jpg" mode="aspectFill"></image>
+		<image class="pic" src="/static/wallpaper/w5.jpg" mode="aspectFill"></image>
 		<view class="mask">
 			<uni-icons type="more-filled" color="#ffffff" size="24"></uni-icons>
 			<text class="text">More</text>
@@ -26,7 +26,7 @@
 		//跳转链接
 		link: {
 			type: String,
-			default: "/pages/classify/classify"
+			default: "/pages/classlist/classlist"
 		},
 		//图片地址
 		image: {

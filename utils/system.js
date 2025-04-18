@@ -1,8 +1,8 @@
 //获取uniapp的系统信息
-const SYSTEM_INFO = uni.getSystemInfo();
+const SYSTEM_INFO = uni.getSystemInfoSync()
 
 //获取并导出顶部状态栏的高度
-export const getStatusBarHeight = () => SYSTEM_INFO.getStatusBarHeight || 0;
+export const getStatusBarHeight = () => SYSTEM_INFO.getStatusBarHeight;
 
 
 //获取顶部菜单按钮

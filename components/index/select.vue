@@ -1,3 +1,5 @@
+<!-- 每日精选部分 -->
+
 <!-- https://uniapp.dcloud.net.cn/component/uniui/uni-dateformat.html -->
 <template>
    <view class="select">
@@ -12,11 +14,14 @@
 			   </view>
 		   </template>
 	   </commonTitleVue>
+	   <!-- 调用commmonTitleVue来封装处理标题块 -->
+	   
+	   <!--每日精选图片属性 点击跳转/图片地址 -->
 	   <view class="content">
-		   <scroll-view> <!-- class="Scroll_H" scroll-x="true" @scroll="scroll" scroll-left="120" -->
-			   <view class="item" v-for="item in 5"> <!-- 8 个实际-->
+		   <scroll-view scroll-x> 
+			   <navigator class="item" v-for="item in 5" url="/pages/preview/preview"> <!-- 8 个实际-->
 				   <image :src="'/static/wallpaper/w' + item + '.jpg'"mode="aspectFill"></image>
-			   </view>
+			   </navigator>
 		   </scroll-view>
 	   </view>
    </view>
