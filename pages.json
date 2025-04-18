@@ -26,6 +26,14 @@
 			{
 				"navigationBarTitleText" : "分类页表"
 			}
+		},
+		{
+			"path" : "pages/preview/preview",
+			"style" : 
+			{
+				"navigationBarTitleText" : "预览\r
+		\t\t"
+			}
 		}
 	],
 	"tabBar":{
