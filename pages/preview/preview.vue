@@ -237,7 +237,7 @@
 	const popup = ref(null);
 
 	// 返回上一页
-	const toBack = () => {
+	const toBack = () => {    //如何转换回首页？
 		uni.navigateBack();
 	}
 
